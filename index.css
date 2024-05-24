@@ -1,0 +1,275 @@
+@keyframes moveAndFade {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100px); opacity: 0; }
+}
+@keyframes moveUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+body {
+    /*font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);*/
+    margin: 3%;
+    padding: 3%;
+    /*box-sizing: border-box;*/
+    
+
+    /*lo que yipi agregó*/
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+h1 {
+    text-align: center;
+    /*color: #007BFF;*/
+    font-size: 2.7em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    /*color: #333;*/
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+    
+
+}
+
+
+#chartContainer, #dataContainer, #bottleContainer {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+
+    
+
+    
+}
+
+#dataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    
+}
+
+#dataContainer p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+#pieChart {
+    width: 100%;
+    
+}
+
+
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#tank {
+    width: 200px;
+    height: 400px;
+    border: 1px solid black;
+    position: relative;
+    background: #ddd;
+    border-radius: 10px;
+}
+
+#water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ruler {
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to bottom, white 0%, white 10%, black 10%, black 20%, white 20%, white 30%, black 30%, black 40%, white 40%, white 50%, black 50%, black 60%, white 60%, white 70%, black 70%, black 80%, white 80%, white 90%, black 90%, black 100%);
+    background-size: 100% 5%;
+}
+
+#bottleContainer {
+    position: relative;
+    height: 150px;
+    margin-top: 50px;
+}
+
+.bottle {
+    width: 50px;
+    height: 150px;
+    border: 1px solid black;
+    position: relative;
+    bottom: 0;
+    background: #ddd;
+    border-radius: 50% 50% 30% 30%;
+    margin-right: 10px;
+}
+
+.bottleWater {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 30%;
+    border-radius: 50% 50% 30% 30%;
+}
+
+button {
+    /*background-color: #007BFF;
+    color: white;*/
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+/*
+button:hover {
+    background-color: #0056b3;
+}
+*/
+
+#container {
+    background-color: #ffffff;
+    margin: 15px;
+    width: 1500px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#chart-container {
+    width: 50%;
+    height: 50%;
+}
+
+#header, #menu-bar, #container {
+    display: block;
+    width: 1430px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.input-group label{
+    height: 50px;
+}
+.etiqueta-larga {
+    width: 250px;
+}
+.input-group label, .input-group input {
+    display: inline-block;
+    width: 200px; 
+}
+
+
+
+
+
+
+
+
+
+
+/* lo que yipi agregó nuevo*/
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    width: 100%; /* Ajusta este valor según tus necesidades */
+}
+
+/*#1fa2ff, #12d8fa
+    #013440, #025159
+    #F2E9E4 #F2E9E4
+*/
+body {
+    /* Usamos los colores 1, 3 y 4 para el gradiente de fondo */
+    background: linear-gradient(to right, #025159, #31a5b9, #a1b1b5);
+}
+
+h1, h2 {
+    /* Usamos el color 2 para los títulos */
+    color: #F2E9E4;
+}
+
+button {
+    /* Usamos el color 5 para el fondo de los botones */
+    background-color: #F2E9E4;
+
+    color: #013440;
+
+}
+
+button:hover{
+    background-color: #73d9eb;
+}
+
+h1, h2, button {
+    font-family: "Century Gothic", 'Roboto', sans-serif;
+}
+
+
+/* lo que yipi agregó para el dashboard */
+
+body {
+    min-height: 100vh;
+}
+
+#container {
+    max-width: 160%; /* Ajusta este valor según tus necesidades */
+    /*margin-right: 30px;*/
+    margin-left: -50px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* luego pa los botones del index */
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ajusta este valor para cambiar la separación entre los botones */
+}
+
+#buttonContainer button {
+    padding: 10px 20px; /* Ajusta estos valores para cambiar el tamaño de los botones */
+}
+

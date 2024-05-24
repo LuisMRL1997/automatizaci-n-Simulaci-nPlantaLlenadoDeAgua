@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monitoreo de Nivel de Estanque</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1>Proyecto de Planta de Llenado de Botellas de Agua</h1>
+    <div id="buttonContainer">
+        <button id="startButton">Iniciar Simulación</button>
+        <button id="resetButton">Reiniciar Simulación</button>
+        <button id="dashboardButton">Visualizar dashboard</button>
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="seccion">
+            <h2>Tanque</h2>
+            <div id="chartContainer">
+                <div id="tank">
+                    <div class="ruler"></div>
+                    <div id="water"></div>
+                </div>
+            </div>
+        </div>
+        <div class="seccion">
+            <h2>Botellas</h2>
+            <div id="bottleContainer">
+                <div class="bottle" id="fillingBottle">
+                    <div class="bottleWater" id="fillingBottleWater"></div>
+                </div>
+                <div class="bottle">
+                    <div class="bottleWater"></div>
+                </div>
+                <div class="bottle">
+                    <div class="bottleWater"></div>
+                </div>
+                <div class="bottle">
+                    <div class="bottleWater"></div>
+                </div>
+            </div>
+        </div>
+        <div class="seccion">
+            <h2>Tablero de Control</h2>
+            <div id="dataContainer">
+                <!-- Aquí va el resto del contenido de la sección Tablero de Control -->
+                <p id="botellasVendidas"><i class="fas fa-wine-bottle"></i> Botellas vendidas: 0</p>
+        <p id="gananciaBotellasLlenadas"><i class="fas fa-dollar-sign" style="color: green;"></i> Ganancia por botellas llenadas: $0</p>
+        <p id="aguaDesperdiciada"><i class="fas fa-tint" style="color: red;"></i> Agua desperdiciada: 0 litros</p>
+        <p id="costoAguaDesperdiciada"><i class="fas fa-dollar-sign" style="color: red;"></i> Costo del agua desperdiciada: $0</p>
+        <p id="energiaConsumida"><i class="fas fa-bolt" style="color: yellow;"></i> Energía consumida: 0 vatios</p>
+        <p id="costoEnergia"><i class="fas fa-bolt" style="color: yellow;"></i> Costo de energía: $0</p>
+        <p id="costoOperacion"><i class="fas fa-dollar-sign" style="color: green;"></i> Costo de operaciones: $0</p>
+        <p id="gananciaTotal"><i class="fas fa-dollar-sign" style="color: green;"></i> Ganancia total: $0</p>
+        <p id="alertaDesbordamiento"><i class="fas fa-exclamation-triangle" style="color: indigo;"></i> Alertas de desbordamiento: 0</p>
+        <p id="alertaSequedad"><i class="fas fa-exclamation-triangle" style="color: red;"></i> Alertas de sequedad: 0</p>
+        <p id="alertasTotales"><i class="fas fa-exclamation-triangle" style="color: orange;"></i> Alertas totales: 0</p>
+        <p id="tiempoTranscurrido"><i class="fas fa-clock"></i> Tiempo transcurrido: 0 segundos</p>
+        <p id="nivelMedio"><i class="fas fa-water"></i> Nivel medio del tanque de agua: 0</p>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

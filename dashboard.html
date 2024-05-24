@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <button onclick="location.href='index.html'">Volver</button>
+    <div id="container">
+        <div class="input-row">
+            <div class="input-group">
+                <h3>Jornadas con mayores ingresos</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Ingresos de las jornadas más recientes</h2>
+                <canvas id="myChart2"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Crecimiento de las ganancias totales</h2>
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <h3>Costo total de energía y agua desperdiciada</h2>
+                <canvas id="myChart4"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Comparación de costos de operación, cantidad de alertas y costo total de energía y agua desperdiciada</h2>
+                <canvas id="myChart10"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Línea de tiempo de costos y alertas</h2>
+                <canvas id="myChart6"></canvas>
+            </div>
+        </div> 
+        <div class="input-row">
+            <div class="input-group">
+                <h3>10 jornadas con la mayor cantidad de alertas</h2>
+                <canvas id="myChart8"></canvas>
+                
+            </div>
+            <div class="input-group">
+                <h3>Alertas de desbordamiento y sequedad</h2>
+                <canvas id="myChart5"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Línea de tiempo de alertas de sequedad y desbordamiento</h2>
+                <canvas id="myChart9"></canvas>
+            </div>
+        </div> 
+        <div class="input-row">
+            <div class="input-group">
+                <h3>Nivel medio de agua de las 10 jornadas con mayor nivel de agua</h2>
+                <canvas id="myChart7"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Línea de tiempo de las fluctuaciones del nivel medio del agua</h2>
+                <canvas id="myChart14"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>Fluctuaciones del nivel medio del agua y botellas vendidas</h2>
+                <canvas id="myChart15"></canvas>
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="input-group">
+                <h3>10 jornadas con más botellas vendidas</h2>
+                <canvas id="myChart12"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>10 jornadas más recientes</h2>
+                <canvas id="myChart13"></canvas>
+            </div>
+            <div class="input-group">
+                <h3>10 jornadas con más ganancias por vender botellas</h2>
+                <canvas id="myChart16"></canvas>
+            </div>
+        </div>        
+    </div>      
+<script src="dashboard.js"></script>
+</body>
+</html>
